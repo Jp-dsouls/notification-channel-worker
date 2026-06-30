@@ -13,6 +13,7 @@ const rabbitmq_module_1 = require("./rabbitmq/rabbitmq.module");
 const processors_module_1 = require("./processors/processors.module");
 const channels_module_1 = require("./channels/channels.module");
 const database_module_1 = require("./database/database.module");
+const logger_module_1 = require("./logger/logger.module");
 let AppModule = class AppModule {
 };
 exports.AppModule = AppModule;
@@ -22,6 +23,7 @@ exports.AppModule = AppModule = __decorate([
             config_1.ConfigModule.forRoot({
                 isGlobal: true,
             }),
+            logger_module_1.LoggerModule,
             rabbitmq_module_1.RabbitMQModule,
             processors_module_1.ProcessorsModule,
             channels_module_1.ChannelsModule,
